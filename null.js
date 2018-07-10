@@ -1,4 +1,5 @@
-Object.defineProperties(window, {
+const general = window || global;
+Object.defineProperties(general, {
     Null: {
       value: new Proxy({}, {get() {return Null},set(){return Null}}),
       writable: false,
