@@ -1,0 +1,7 @@
+{
+  "name": "null",
+  "private": true,
+  "type": "module",
+  "main": "./null.js",
+  "types": "./null.d.ts"
+}

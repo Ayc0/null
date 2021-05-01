@@ -1,16 +1,13 @@
-const general = window || global;
-Object.defineProperties(general, {
-    Null: {
-      value: new Proxy({}, {get() {return Null},set(){return Null}}),
-      writable: false,
-      configurable: false,
-      enumerable: true
+export const Null = new Proxy(
+  {},
+  {
+    get() {
+      return Null;
     },
-    isNull: {
-      value: value => value === null || value === Null,
-      writable: false,
-      configurable: false,
-      enumerable: false
-    }
+    set() {
+      return Null;
+    },
   }
 );
+
+export const isNull = (value) => value === null || value === Null;
